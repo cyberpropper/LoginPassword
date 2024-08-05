@@ -1,6 +1,6 @@
 
 public interface ServiceInterface {
-    static void check(String login, String password, String confirmPassword) {
+    static void check(String login, String password, String confirmPassword) throws WrongPasswordException, WrongLoginException {
         if (login.length() > 20) {
             throw new WrongLoginException("Логин не может содержать больше 20 символов");
         }
